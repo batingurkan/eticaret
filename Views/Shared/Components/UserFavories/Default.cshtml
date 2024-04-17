@@ -1,0 +1,77 @@
+@model List<eTicaretEL.Dtos.FavoriesDto>
+
+<div id="store" class="col-md-9">
+
+    <div class="alert alert-success " role="alert">
+        <span><b> @ViewBag.v1 </b>Ürün Bulundu</span>
+    </div>
+
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 col-xs-6">
+                <div class="product">
+                    <div class="product-img">
+                        <img src="~/electro-master/img/@item.Product.Img" width="600" height="300" alt="">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">
+                            <a href="#">@item.ProductName</a>
+                        </h3>
+                        @if (@item.Product.Description.Length > 20)
+                        {
+                            <span>@item.Product.Description.Substring(0, 20)...</span>
+                        }
+                        else
+                        {
+                            <span>@item.Product.Description</span>
+                        }
+                        <h4 class="product-price">$@item.Product.Price <del class="product-old-price">$@item.Product.Price</del></h4>
+                        <div class="product-btns">
+                            <form method="post" asp-controller="Favories" asp-action="FavorieRemove">
+                                <input type="hidden" name="favoriesId" value="@item.Id"/>
+                                <button type="submit" class="btn btn-danger">Favorilerden Çıkar</button>
+                            </form>
+                            <button class="quick-view">
+                                <a href="/Home/Product/@item.ProductId">
+                                    <i class="fa fa-eye"></i><span class="tooltipp">Ürünü İncele</span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="add-to-cart">
+                        <form method="post" asp-controller="Cart" asp-action="CartItemAdd">
+                            <input type="hidden" name="CartId" value="@ViewBag.CartId"/>
+                            <input type="hidden" name="ProductId" value="@item.Id"/>
+                            <button class="add-to-cart-btn" type="submit">
+                                <i class="fa fa-shopping-cart"></i> Sepete Ekle
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="store-filter clearfix">
+        <ul class="store-pagination">
+            <li class="active">1</li>
+            <li>
+                <a href="#">2</a>
+            </li>
+            <li>
+                <a href="#">3</a>
+            </li>
+            <li>
+                <a href="#">4</a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>

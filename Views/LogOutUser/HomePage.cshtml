@@ -1,0 +1,127 @@
+@model List<eTicaretEL.Dtos.ProductDto>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+
+<!-- /BREADCRUMB -->
+
+<!-- SECTION -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- ASIDE -->
+            <div id="aside" class="col-md-3">
+
+                <!-- aKatgegoriler -->
+
+                @await Component.InvokeAsync("LogOutPageCategory")
+
+
+                <!--Marka -->
+                @await Component.InvokeAsync("LogOutPageBrand")
+
+
+            </div>
+
+            <div class="col-md-9">
+                <div class="header-search">
+                    <form>
+
+                        <input class="input" placeholder="Ürün Ara">
+                        <button class="search-btn">Ara</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- STORE -->
+            <div id="store" class="col-md-9">
+
+                <!-- /store top filter -->
+
+                <!-- store products -->
+                <div class="row">
+                    <div class="alert alert-success" role="alert">
+                        @ViewBag.v1 Ürün Bulundu
+                    </div>
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-4 col-xs-6">
+                            <div class="product">
+                                <div class="product-img">
+                                    <img src="~/electro-master/img/@item.Img" width="345" height="250" alt="">
+                                    <div class="product-label">
+                                        <span class="sale">-30%</span>
+                                    </div>
+                                </div>
+                                <div class="product-body">
+                                    <a href="">
+                                        <p class="product-category">@item.CategoryName</p>
+                                    </a>
+                                    <h3 class="product-name">
+                                        <a href="/Home/Product/@item.Id">@item.Name</a>
+                                    </h3>
+                                    <h4 class="product-price">$@item.Price <del class="product-old-price">$@item.Price</del></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="product-btns">
+                                        <button class="add-to-wishlist">
+                                            <a href="/Login/Index/">
+                                                <i class="fa fa-heart-o"></i><span class="tooltipp">Favorilere Ekle</span>
+                                            </a>
+                                        </button>
+                                        <button class="quick-view">
+                                            <a href="/LogOutUser/Product/@item.Id">
+                                                <i class="fa fa-eye"></i><span class="tooltipp">Ürünü İncele</span>
+                                            </a>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="add-to-cart">
+                                    <button class="add-to-cart-btn">
+                                        <a href="/Login/Index/"><i class="fa fa-shopping-cart"></i> Sepete Ekle</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+
+
+
+                </div>
+                <!-- /store products -->
+
+                @{
+                    int pageSize = 10; // Sayfa başına ürün sayısı
+                    int totalProducts = ViewBag.v1; // Toplam ürün sayısı
+
+                    // Son sayfa numarasını hesapla
+                    int lastPage = (int)Math.Ceiling((double)totalProducts / pageSize);
+                    int currentPage = ViewBag.CurrentPage ?? 1;
+
+                    // Önceki sayfa ve sonraki sayfa numaralarını güvenli bir şekilde hesapla
+                    var previousPage = Math.Max(currentPage - 1, 1);
+                    var nextPage = Math.Min(currentPage + 1, lastPage);
+                }
+
+                <a asp-action="HomePage" asp-route-page="@(previousPage)" class="btn btn-outline-primary @(currentPage == 1 ? "disabled" : "")">Önceki Sayfa</a>
+                <a asp-action="HomePage" asp-route-page="@(nextPage)" class="btn btn-outline-primary @(currentPage == lastPage ? "disabled" : "")">Sonraki Sayfa</a>
+            </div>
+            <!-- /STORE -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>

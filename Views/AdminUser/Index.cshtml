@@ -1,0 +1,43 @@
+@model List<eTicaretEL.Entities.User>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_LayoutAdmin";
+}
+<br/>
+<h2>Kullanıcılar</h2>
+<br/>
+
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Resim</th>
+        <th scope="col">İsim</th>
+        <th scope="col">Mail</th>
+        <th scope="col">Telefon</th>
+        <th scope="col">Ürünler</th>
+        <th scope="col">Siparişler</th>
+        <th scope="col">Düzenle</th>
+        <th scope="col">Sil</th>
+       
+    </tr>
+    </thead>
+    <tbody>
+    
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th scope="row">@item.Id</th>
+            <th scope="row">  <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin"  width="40"></th>
+            <th scope="row">@item.Name</th>
+            <td>@item.Email</td>
+            <td>@item.Tel</td>
+             <td><a href="/AdminProduct/UserProduct/@item.Id" class="btn btn-primary">Ürünler</a></td>
+             <td><a href="/AdminOrder/UserOrder/@item.Id" class="btn btn-success">Siparişler</a></td>
+            <td><a href="/AdminUser/UserEdit/@item.Id" class="btn btn-warning">Düzenle</a></td>
+            <td><a href="/AdminUser/UserEdit/@item.Id" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+    </tbody>
+</table>

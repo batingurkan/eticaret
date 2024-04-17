@@ -1,0 +1,46 @@
+@model List<eTicaretEL.Dtos.OrderDto>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_LayoutAdmin";
+}
+
+<br/>
+<h2>Siparişler</h2>
+<br/>
+<div class="alert alert-success" role="alert">
+ @ViewBag.v1 Sipariş Bulundu
+</div>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Kullanıcı</th>
+        <th scope="col">Durum</th>
+        <th scope="col">Tutar</th>
+        <th scope="col">Kargo Numarası</th>
+        <th scope="col">Kargo Şirketi</th>
+        <th scope="col">Detaylar</th>
+        <th scope="col">Düzenle</th>
+        <th scope="col">Sil</th>
+       
+    </tr>
+    </thead>
+    <tbody>
+    
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th scope="row">@item.Id</th>
+            <td>@item.User.Name</td>
+            <td>@item.OrderStatus.Status</td>
+            <td>@item.TotalAmount</td>
+            <td>@item.CargoNo</td>
+            <td>@item.Cargo.Name</td>
+            <td><a href="/AdminOrder/OrderDetail/@item.Id" class="btn btn-success">Detaylar</a></td>
+            <td><a href="/AdminOrder/OrderEdit/@item.Id" class="btn btn-warning">Düzenle</a></td>
+            <td><a href="/AdminOrder/OrderEdit/@item.Id" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+    </tbody>
+</table>

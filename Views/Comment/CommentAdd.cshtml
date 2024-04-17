@@ -1,0 +1,29 @@
+@model eTicaretEL.Entities.Comment
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_LayouteTicaret";
+}
+<!-- Review Form -->
+<div class="col-md-6">
+    <div id="review-form">
+        <form method="post" asp-controller="Comment" asp-action="CommentAdd" class="review-form">
+            <input type="input" name="ProductId" value="@Model.ProductId"> 
+            <div class="form-group">
+                <label for="rating">Rating</label>
+                <div class="stars">
+                  <input id="star5" name="Rating" value="5" type="radio"><label for="star5"></label>
+                  <input id="star4" name="Rating" value="4" type="radio"><label for="star4"></label>
+                  <input id="star3" name="Rating" value="3" type="radio"><label for="star3"></label>
+                  <input id="star2" name="Rating" value="2" type="radio"><label for="star2"></label>
+                  <input id="star1" name="Rating" value="1" type="radio"><label for="star1"></label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description">Yorumunuz</label>
+                <textarea class="form-control" id="description" name="Description" rows="3" placeholder="Yorumunuz"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Yorum Yap</button>
+        </form>
+    </div>
+</div>

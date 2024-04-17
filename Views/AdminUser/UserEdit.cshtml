@@ -1,0 +1,69 @@
+@model eTicaretEL.Entities.User?
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="row container padding ">
+    <div class="col-xl-1 col-md-1">
+          <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+    </div>
+    <div class="col-xl-11 col-md-11">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Kullanıcı Düzenleme</h2>
+                <form method="post" asp-action="UserEdit" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="productName">Kullanıcı Adı</label>
+                        <input type="text" asp-for="Name" class="form-control" id="productName" placeholder="Kullanıcı Adı">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Email</label>
+                        <input type="text" asp-for="Email" class="form-control" id="productPrice" placeholder="Email">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Adres</label>
+                        <input type="text" asp-for="Adress" class="form-control" id="productPrice" placeholder="Adres">
+                        <span asp-validation-for="Adress" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="productImage">Şifre</label>
+                        <input type="text" asp-for="Password" class="form-control" id="productImage" placeholder="*******">
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="productImage">Telefon</label>
+                        <input type="number" asp-for="Tel" class="form-control" id="productImage" placeholder="0(532) 542 ** **">
+                        <span asp-validation-for="Tel" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="productModel">Rol</label>
+                        <input type="text" asp-for="UserRole" class="form-control" id="productModel" placeholder="Rol">
+                        <span asp-validation-for="UserRole" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kullanıcıyı Düzenle</button>
+                    <a class="btn btn-danger text-white" data-toggle="modal" data-target="#exampleModal2-@Html.DisplayFor(x => x.Id)">Sil</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal2-@Html.DisplayFor(x => x.Id)" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">@Html.DisplayFor(x => x.Name)</h5>
+            </div>
+            <div class="modal-body">
+                <img src="~/electro-master/img/master.png" width="300" height="300" class="img-fluid" alt="Kullanıcıyı Resmi">
+            </div>
+            <div class="modal-body">
+                <a href="#" class="btn btn-danger">Kullanıcıyı Sil</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+@model List<eTicaretEL.Dtos.CommentDto>
+
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-9">
+            <!-- Rating -->
+            <div class="col-md-4">
+                <div id="rating">
+                    <div class="rating-avg">
+                        <span>@item.Raiting</span>
+                        <div class="rating-stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Rating -->
+
+            <!-- Reviews -->
+            <div class="col-md-8">
+                <div id="reviews">
+                    <ul class="reviews">
+                        <li>
+                            <div class="review-heading">
+                                <h5 class="name">@item.UserName</h5>
+                                <p class="date">@item.Date</p>
+                                <div class="review-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o empty"></i>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p>@item.Description</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /Reviews -->
+        </div>
+
+    }
+
+

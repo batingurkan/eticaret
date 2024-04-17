@@ -1,0 +1,45 @@
+@model eTicaretEL.Entities.Admin
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+
+<body class="inner_page login" >
+<div class="full_container  ">
+    <div class="container  " >
+        <div class="center verticle_center full_height " >
+            <div class="login_section ">
+                <div class="logo_login " style="background-color: #d10024">
+                    <div class="center">
+                        <img src="~/electro-master/logo/b-logo2.jpeg" width="70px" alt="" style="border-radius: 20px;" class="d-flex"><span style="font-size: 30px;color: white;">-Ticaret</span>
+                    </div>
+                </div>
+                <h2>Admin</h2>
+                <div class="login_form">
+                    <form method="post" asp-action="Index" asp-controller="LoginAdm" >
+                        <fieldset>
+                            <div class="field ">
+                                <label class="label_field" class="form-label">Admin :</label>
+                                <input type="text" class="form-control"  name="Name" placeholder="Admin" />
+                            </div>
+                            <div class="field">
+                                <label class="label_field" class="form-label">Şifre :</label>
+                                <input type="password" class="form-control"  name="Password" placeholder="********" />
+                            </div>
+                            <div class="field margin_0">
+                                <label class="label_field hidden" class="form-label"></label>
+                                <button class="main_bt btn btn-success">Giriş Yap</button>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jQuery -->
+    
+</body>

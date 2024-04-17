@@ -1,0 +1,46 @@
+@model List<eTicaretEL.Dtos.ProductDto>
+
+<div class="container">
+    <!-- row -->
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="section-title text-center">
+                <h3 class="title">Önerilen Ürünler</h3>
+            </div>
+        </div>
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3 col-xs-6">
+                <div class="product">
+                    <div class="product-img">
+                        <img src="~/electro-master/img/@item.Img" alt="">
+                        <div class="product-label">
+                            <span class="sale">-30%</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-category">@item.CategoryName</p>
+                        <h3 class="product-name"><a href="#">@item.Name</a></h3>
+                        <h4 class="product-price">$@item.Price <del class="product-old-price">$@item.Price</del></h4>
+                        <div class="product-rating">
+                        </div>
+                        <div class="product-btns">
+                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Favorilere Ekle</span></button>
+                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Ürünü İncele</span></button>
+                        </div>
+                    </div>
+                    <div class="add-to-cart">
+                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Sepete Ekle</button>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+			
+
+    </div>
+    <!-- /row -->
+</div>

@@ -1,0 +1,29 @@
+@model eTicaretEL.Dtos.UserDto
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_LayouteTicaret";
+}
+
+<div class="section">
+
+<div class="container">
+
+<div class="row">
+
+<div id="aside" class="col-md-2">
+
+    <div class="aside">
+        <h4>@Html.DisplayFor(x => x.Name)</h4>
+    </div>
+
+</div>
+
+
+@await Component.InvokeAsync("UserProfileStore", new { userId = Model.Id })
+
+</div>
+
+</div>
+
+</div>

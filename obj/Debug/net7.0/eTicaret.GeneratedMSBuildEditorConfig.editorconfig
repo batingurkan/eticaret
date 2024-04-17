@@ -1,0 +1,279 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = eTicaret
+build_property.RootNamespace = eTicaret
+build_property.ProjectDir = /Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = /Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/UserOrderDetail/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvVXNlck9yZGVyRGV0YWlsL0RlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/AdminMessage/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5NZXNzYWdlL0RldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/AdminMessage/NewMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5NZXNzYWdlL05ld01lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/AdminMessage/Sender.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5NZXNzYWdlL1NlbmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/AdminOrder/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5PcmRlci9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/AdminOrder/OrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5PcmRlci9PcmRlckRldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/AdminOrder/OrderEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5PcmRlci9PcmRlckVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/AdminProduct/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5Qcm9kdWN0L0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/AdminProduct/UserProductEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5Qcm9kdWN0L1VzZXJQcm9kdWN0RWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/AdminUser/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5Vc2VyL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/AdminUser/UserEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5Vc2VyL1VzZXJFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Cart/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9QYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Comment/CommentAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbWVudC9Db21tZW50QWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Home/BestSellers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9CZXN0U2VsbGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Home/HomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Ib21lUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Home/Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Home/UserProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Vc2VyUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/LoginAdm/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW5BZG0vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/LogOutUser/HomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9nT3V0VXNlci9Ib21lUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/LogOutUser/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9nT3V0VXNlci9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/LogOutUser/Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9nT3V0VXNlci9Qcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Register/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVnaXN0ZXIvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/AddComment/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvQWRkQ29tbWVudC9EZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/BestSellerUserProducts/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvQmVzdFNlbGxlclVzZXJQcm9kdWN0cy9EZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/HomeBestsellerProduct/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvSG9tZUJlc3RzZWxsZXJQcm9kdWN0L0RlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/HomeNewProduct/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvSG9tZU5ld1Byb2R1Y3QvRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/HomePageBrand/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvSG9tZVBhZ2VCcmFuZC9EZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/HomePageCategory/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvSG9tZVBhZ2VDYXRlZ29yeS9EZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/LogOutBestSeller/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvTG9nT3V0QmVzdFNlbGxlci9EZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/LogOutPageBrand/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvTG9nT3V0UGFnZUJyYW5kL0RlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/LogOutPageCategory/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvTG9nT3V0UGFnZUNhdGVnb3J5L0RlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/LogOutProductSuggested/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvTG9nT3V0UHJvZHVjdFN1Z2dlc3RlZC9EZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/LogOutUserNewProduct/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvTG9nT3V0VXNlck5ld1Byb2R1Y3QvRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/ProductComment/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvUHJvZHVjdENvbW1lbnQvRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/ProductSuggested/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvUHJvZHVjdFN1Z2dlc3RlZC9EZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/UserFavories/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvVXNlckZhdm9yaWVzL0RlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/UserIndexStore/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvVXNlckluZGV4U3RvcmUvRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/UserOrderPendingApproval/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvVXNlck9yZGVyUGVuZGluZ0FwcHJvdmFsL0RlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/UserOrders/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvVXNlck9yZGVycy9EZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/UserOrdersApproved/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvVXNlck9yZGVyc0FwcHJvdmVkL0RlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/UserOrdersShipped/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvVXNlck9yZGVyc1NoaXBwZWQvRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Components/UserProfileStore/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvVXNlclByb2ZpbGVTdG9yZS9EZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/_LayouteTicaret.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXRlVGljYXJldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/User/Approved.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9BcHByb3ZlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/User/Favories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9GYXZvcmllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/User/OrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9PcmRlckRldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/User/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9PcmRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/User/PendingApproval.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9QZW5kaW5nQXBwcm92YWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/User/Shipped.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9TaGlwcGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/UserMail/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlck1haWwvRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/UserMail/NewMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlck1haWwvTmV3TWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/UserMail/Sender.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlck1haWwvU2VuZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/UserProduct/ProductAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlclByb2R1Y3QvUHJvZHVjdEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/UserProduct/ProductEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlclByb2R1Y3QvUHJvZHVjdEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-058cpjs9hy

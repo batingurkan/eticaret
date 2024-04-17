@@ -1,0 +1,56 @@
+@model eTicaretEL.Entities.Order?
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="row container padding ">
+    <div class="col-xl-11 col-md-11">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Sipariş Düzenleme</h2>
+                <br/>
+                <form method="post" asp-action="OrderEdit" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="UserId" class="form-control" id="productName" placeholder="Kullanıcı Adı">
+                    <div class="form-group">
+                        <label for="productName">Kargo Şirketi</label>
+                        @Html.DropDownListFor(x => x.CargoId, (List<SelectListItem>)ViewBag.car, new { @class = "form-control" })
+                        <span asp-validation-for="CargoId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Kargo Numarası</label>
+                        <input type="text" asp-for="CargoNo" class="form-control" id="productPrice" placeholder="Email">
+                        <span asp-validation-for="CargoNo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Toplam Ödeme</label>
+                        <input type="text" asp-for="TotalAmount" class="form-control" id="productPrice" placeholder="Email">
+                        <span asp-validation-for="TotalAmount" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="productName">Sipariş Durumu</label>
+                        @Html.DropDownListFor(x => x.OrderStatusId, (List<SelectListItem>)ViewBag.stat, new { @class = "form-control" })
+                        <span asp-validation-for="OrderStatusId" class="text-danger"></span>
+                    </div>
+                   
+                    <button type="submit" class="btn btn-primary">Kullanıcıyı Düzenle</button>
+                    <a class="btn btn-danger text-white" data-toggle="modal" data-target="#exampleModal2-@Html.DisplayFor(x => x.Id)">Sil</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal2-@Html.DisplayFor(x => x.Id)" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+              
+            </div>
+            <div class="modal-body">
+                <a href="#" class="btn btn-danger">Siparişi Sil</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Pluto - Responsive Bootstrap Admin Panel Templates</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- site icon -->
+    <link type="text/css" rel="stylesheet" href="~/electro-master/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="~/electro-master/css/slick.css"/>
+    <link type="text/css" rel="stylesheet" href="~/electro-master/css/slick-theme.css"/>
+    <link type="text/css" rel="stylesheet" href="~/electro-master/css/nouislider.min.css"/>
+    <link rel="stylesheet" href="~/electro-master/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="~/electro-master/css/style.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="~/Admin/css/bootstrap.min.css"/>
+    <!-- site css -->
+    <link rel="stylesheet" href="~/Admin/style.css"/>
+    <!-- responsive css -->
+    <link rel="stylesheet" href="~/Admin/css/responsive.css"/>
+    <!-- color css -->
+    <!-- select bootstrap -->
+    <link rel="stylesheet" href="~/Admin/css/bootstrap-select.css"/>
+    <!-- scrollbar css -->
+    <link rel="stylesheet" href="~/Admin/css/perfect-scrollbar.css"/>
+    <!-- custom css -->
+    <link rel="stylesheet" href="~/Admin/css/custom.css"/>
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="dashboard dashboard_1">
+<div class="full_container">
+    <div class="inner_container">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar_blog_2">
+                <h4>Admin</h4>
+                <ul class="list-unstyled components">
+
+                    <li>
+                        <a href="/AdminUser/Index/">
+                            <i class="fa fa-clock-o orange_color"></i> <span>Kullanıcılar</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/AdminProduct/Index/">
+                            <i class="fa fa-table purple_color2"></i> <span>Ürünler</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fa fa-diamond purple_color"></i> <span>Siparişler</span>
+                        </a>
+                        <ul class="collapse list-unstyled" id="element">
+                            <li>
+                                <a href="/AdminOrder/Index/">
+                                    <span>Tüm Siparişler</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/AdminOrder/PendingApproval/">
+                                    <span>Onay Bekleyen Siparişler</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/AdminOrder/Shipped/">
+                                    <span>Kargolanan Siparişler</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/AdminOrder/Approved/">
+                                    <span>Onaylanan Siparişler</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/AdminMessage/Sender/">
+                            <i class="fa fa-paper-plane red_color"></i> <span>İletişim</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="map.html">
+                            <i class="fa fa-map purple_color2"></i> <span>Map</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="charts.html">
+                            <i class="fa fa-bar-chart-o green_color"></i> <span>İstatistikler</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fa fa-cog yellow_color"></i> <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end sidebar -->
+        <!-- right content -->
+        <div id="content">
+            <!-- topbar -->
+            <div class="topbar">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="full">
+                        <button type="button" id="sidebarCollapse" class="sidebar_toggle">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <div class="right_topbar">
+                            <div class="icon_info">
+
+                                <ul class="user_profile_dd">
+                                    <li>
+                                        <a class="dropdown-toggle" data-toggle="dropdown">
+                                            <span class="name_user">Admin</span>
+                                        </a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="/LoginAdm/Logout/">
+                                                <span>Log Out</span> <i class="fa fa-sign-out"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            @RenderBody()
+        </div>
+    </div>
+</div>
+<!-- jQuery -->
+<script src="~/Admin/js/jquery.min.js"></script>
+<script src="~/Admin/js/popper.min.js"></script>
+<script src="~/Admin/js/bootstrap.min.js"></script>
+<!-- wow animation -->
+<script src="~/Admin/js/animate.js"></script>
+<!-- select country -->
+<script src="~/Admin/js/bootstrap-select.js"></script>
+<!-- owl carousel -->
+<script src="~/Admin/js/owl.carousel.js"></script>
+<!-- chart js -->
+<script src="~/Admin/js/Chart.min.js"></script>
+<script src="~/Admin/js/Chart.bundle.min.js"></script>
+<script src="~/Admin/js/utils.js"></script>
+<script src="~/Admin/js/analyser.js"></script>
+<!-- nice scrollbar -->
+<script src="~/Admin/js/perfect-scrollbar.min.js"></script>
+<script>
+         var ps = new PerfectScrollbar('#sidebar');
+      </script>
+<!-- custom js -->
+<script src="~/Admin/js/custom.js"></script>
+<script src="~/Admin/js/chart_custom_style1.js"></script>
+</body>
+</html>
