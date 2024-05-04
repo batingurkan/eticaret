@@ -1,8 +1,12 @@
+using eTicaretBL;
+using eTicaretBL.Abstract;
 using eTicaretDAL;
+using eTicaretDAL.Abstract;
 using eTicaretEL;
 using eTicaretEL.AutoMapper;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 
@@ -29,6 +33,11 @@ builder.Services.AddMvc(config =>
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+builder.Services.AddScoped<IUserServices, UserManager>();
+builder.Services.AddScoped<IUserDal, UserRepository>();
+builder.Services.AddScoped<GenericRepositories>();
+
 
 var mvcBuilder = builder.Services.AddControllersWithViews();
 if (builder.Environment.IsDevelopment())

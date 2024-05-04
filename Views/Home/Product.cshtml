@@ -36,13 +36,28 @@
                 <div class="product-details">
                     <h2 class="product-name">@Html.DisplayFor(x => x.Name)</h2>
                     <div>
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o"></i>
-                        </div>
+                         <div class="product-rating">
+                                    @if (ViewBag.AverageRating != null)
+                                    {
+                                        var averageRating = (decimal)ViewBag.AverageRating;
+                                        for (int i = 0; i < averageRating; i++)
+                                        {
+                                            <i class="fa fa-star"></i>
+                                        }
+                                        for (int i = 0; i < 5 - averageRating; i++)
+                                        {
+                                            <i class="fa fa-star-o"></i>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    }
+                                </div>
                         <a class="review-link" href="/Home/UserProfile/@Html.DisplayFor(x => x.UserId)">Satıcı @Html.DisplayFor(x => x.UserName)</a>
                     </div>
                     <div>
@@ -67,7 +82,7 @@
                     </div>
 
                     <div class="add-to-cart">
-                    
+
                         <form method="post" asp-controller="Cart" asp-action="CartItemAdd">
                             <input type="hidden" name="CartId" value="@ViewBag.CartId"/>
                             <input type="hidden" name="ProductId" value="@Html.DisplayFor(x => x.Id)"/>
@@ -79,7 +94,11 @@
 
                     <ul class="product-btns">
                         <form method="post" asp-controller="Favories" asp-action="FavorieAdd">
-                            <input type="hidden" name="favoriesId" value="@Model.Id"/> <!-- favoriesId değerini hidden input ile gönder -->
+                            @if (Model != null)
+                            {
+                                <!-- Model nesnesi null değilse, içeriği göster -->
+                                <input type="hidden" name="favoriesId" value="@Model.Id"/>
+                            }
                             <button class="btn btn-success" type="submit">Favorilere Ekle</button> <!-- form submit butonu -->
                         </form>
                     </ul>
@@ -131,7 +150,7 @@
                             <a data-toggle="tab" href="#tab2">Detaylar</a>
                         </li>
                         <li>
-                            <a data-toggle="tab" href="#tab3">Yorumlar (3)</a>
+                            <a data-toggle="tab" href="#tab3">Yorumlar (@ViewBag.CommentCount)</a>
                         </li>
                     </ul>
                     <!-- /product tab nav -->
@@ -161,10 +180,13 @@
                         <!-- tab3  -->
                         <div id="tab3" class="tab-pane fade in">
                             <div class="row">
+                                @if (Model != null)
+                                {
+                                    @await Component.InvokeAsync("ProductComment", new { id = Model.Id })
+                                }
 
-                                @await Component.InvokeAsync("ProductComment", new { id = Model.Id })
+                                @await Component.InvokeAsync("CommentAdd", new { userId = ViewBag.UserId, productId = Model.Id })
 
-                                <a href="/Comment/CommentAdd/@Model.Id">Yorum Yap</a>
 
                             </div>
                         </div>

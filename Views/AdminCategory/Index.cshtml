@@ -1,0 +1,11 @@
+@{
+    ViewBag.Title = "title";
+    Layout = "_LayoutAdmin";
+}
+<br/>
+<h2>Kategoriler</h2><br/>
+@await Component.InvokeAsync("AdminCategory")
+<br/>
+<br/>
+<h2>Markalar</h2><br/>
+@await Component.InvokeAsync("AdminBrand")

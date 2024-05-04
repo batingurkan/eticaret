@@ -1273,6 +1273,7 @@
           "Microsoft.EntityFrameworkCore": "7.0.2",
           "MyTested.AspNetCore.Mvc.Razor.RuntimeCompilation": "7.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "eTicaretDAL": "1.0.0",
           "eTicaretEL": "1.0.0"
         },
         "runtime": {

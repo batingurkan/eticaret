@@ -1,0 +1,58 @@
+@model List<eTicaretEL.Dtos.OrderDto>
+
+<div id="store" class="col-md-9">
+
+    <div class="alert alert-success " role="alert">
+        <span>Satılan<b> @ViewBag.v1 </b>Sipariş Bulundu</span>
+    </div>
+
+    <div class="row">
+
+    
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Durum</th>
+                <th scope="col">Fiyat</th>
+                <th scope="col">Tarih</th>
+       
+            </tr>
+            </thead>
+            <tbody>
+    
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.OrderStatus.Status</td>
+                    <td>@item.TotalAmount</td>
+                    <td>@item.OrderDate.ToShortDateString()</td>
+                    <td><a href="/User/OrderDetail/@item.Id" class="btn btn-success">Detaylar</a></td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+    </div>
+    <div class="store-filter clearfix">
+        <ul class="store-pagination">
+            <li class="active">1</li>
+            <li>
+                <a href="#">2</a>
+            </li>
+            <li>
+                <a href="#">3</a>
+            </li>
+            <li>
+                <a href="#">4</a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>

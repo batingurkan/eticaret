@@ -24,14 +24,15 @@ namespace eTicaret.Controllers.User
                 .Include(ci => ci.Product)
                 .Where(ci => ci.UserId == userId)
                 .ToListAsync();
-
+            
+            
             if (cartItems == null || !cartItems.Any())
             {
                 return BadRequest("Sepetiniz boş!");
             }
 
             // Sepet tutarını hesapla
-            decimal totalAmount = cartItems.Sum(ci => ci.Product.Price);
+            decimal totalAmount = cartItems.Sum(ci => ci.Product.Price + 50);
 
             // Sipariş oluştur
             var order = new Order

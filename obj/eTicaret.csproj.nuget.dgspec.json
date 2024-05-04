@@ -128,6 +128,9 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "/Users/gurkan/Desktop/MyProjects/E-Ticaret/Layers/eTicaretDAL/eTicaretDAL.csproj": {
+                "projectPath": "/Users/gurkan/Desktop/MyProjects/E-Ticaret/Layers/eTicaretDAL/eTicaretDAL.csproj"
+              },
               "/Users/gurkan/Desktop/MyProjects/E-Ticaret/Layers/eTicaretEL/eTicaretEL.csproj": {
                 "projectPath": "/Users/gurkan/Desktop/MyProjects/E-Ticaret/Layers/eTicaretEL/eTicaretEL.csproj"
               }

@@ -21,7 +21,7 @@ public class UserIndexStore:ViewComponent
     {    var ıd = HttpContext.Session.GetInt32("userId");
         var products =await _dataContext.Product
             .Include(p => p.User)
-            .Where(p => p.UserId == ıd)
+            .Where(p => p.UserId == ıd && p.IsApproved==true)
             .ToListAsync();
 
         var productDtos = _mapper.Map<List<ProductDto>>(products);

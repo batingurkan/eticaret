@@ -202,107 +202,120 @@
 </style>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="bootdey">
-<div class="email-app mb-4">
-    <nav>
-      <a href="/AdminMessage/NewMessage/"  class="btn btn-danger btn-block">Yeni Mesaj</a>
-        <ul class="nav">
-            <li class="nav-item">
-            <span class="badge badge-danger">@ViewBag.v1</span> <a class="nav-link" href="/AdminMessage/Reciver/"><i class="fa fa-inbox"></i> Gelen Kutusu </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/AdminMessage/Sender/"><i class="fa fa-rocket"></i> Gönderilenler</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-trash-o"></i>Silinenler</a>
-            </li>
-        </ul>
-    </nav>
-    <main class="inbox">
-        <div class="toolbar">
-            <div class="btn-group">
+    <div class="email-app mb-4">
+        <nav>
+            <a href="/AdminMessage/NewMessage/" class="btn btn-success btn-block">Yeni Mesaj</a>
+            <ul class="nav">
+                <li class="nav-item">
+                    <span class="badge badge-danger">@ViewBag.v1</span> <a class="nav-link" href="/AdminMessage/Reciver/"><i class="fa fa-inbox"></i> Gelen Kutusu </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/AdminMessage/Sender/"><i class="fa fa-rocket"></i> Gönderilenler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/AdminMessage/Deleted/"><i class="fa fa-trash-o"></i>Silinenler</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="inbox">
+            <div class="toolbar">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-light">
+                        <span class="fa fa-envelope"></span>
+                    </button>
+                    <button type="button" class="btn btn-light">
+                        <span class="fa fa-star"></span>
+                    </button>
+                    <button type="button" class="btn btn-light">
+                        <span class="fa fa-star-o"></span>
+                    </button>
+                    <button type="button" class="btn btn-light">
+                        <span class="fa fa-bookmark-o"></span>
+                    </button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-light">
+                        <span class="fa fa-mail-reply"></span>
+                    </button>
+                    <button type="button" class="btn btn-light">
+                        <span class="fa fa-mail-reply-all"></span>
+                    </button>
+                    <button type="button" class="btn btn-light">
+                        <span class="fa fa-mail-forward"></span>
+                    </button>
+                </div>
                 <button type="button" class="btn btn-light">
-                    <span class="fa fa-envelope"></span>
+                    <span class="fa fa-trash-o"></span>
                 </button>
-                <button type="button" class="btn btn-light">
-                    <span class="fa fa-star"></span>
-                </button>
-                <button type="button" class="btn btn-light">
-                    <span class="fa fa-star-o"></span>
-                </button>
-                <button type="button" class="btn btn-light">
-                    <span class="fa fa-bookmark-o"></span>
-                </button>
-            </div>
-            <div class="btn-group">
-                <button type="button" class="btn btn-light">
-                    <span class="fa fa-mail-reply"></span>
-                </button>
-                <button type="button" class="btn btn-light">
-                    <span class="fa fa-mail-reply-all"></span>
-                </button>
-                <button type="button" class="btn btn-light">
-                    <span class="fa fa-mail-forward"></span>
-                </button>
-            </div>
-            <button type="button" class="btn btn-light">
-                <span class="fa fa-trash-o"></span>
-            </button>
-            <div class="btn-group">
-                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
-                    <span class="fa fa-tags"></span>
-                    <span class="caret"></span>
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">add label <span class="badge badge-danger"> Home</span></a>
-                    <a class="dropdown-item" href="#">add label <span class="badge badge-info"> Job</span></a>
-                    <a class="dropdown-item" href="#">add label <span class="badge badge-success"> Clients</span></a>
-                    <a class="dropdown-item" href="#">add label <span class="badge badge-warning"> News</span></a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                        <span class="fa fa-tags"></span>
+                        <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">add label <span class="badge badge-danger"> Home</span></a>
+                        <a class="dropdown-item" href="#">add label <span class="badge badge-info"> Job</span></a>
+                        <a class="dropdown-item" href="#">add label <span class="badge badge-success"> Clients</span></a>
+                        <a class="dropdown-item" href="#">add label <span class="badge badge-warning"> News</span></a>
+                    </div>
+                </div>
+                <div class="btn-group float-right">
+                    <button type="button" class="btn btn-light">
+                        <span class="fa fa-chevron-left"></span>
+                    </button>
+                    <button type="button" class="btn btn-light">
+                        <span class="fa fa-chevron-right"></span>
+                    </button>
                 </div>
             </div>
-            <div class="btn-group float-right">
-                <button type="button" class="btn btn-light">
-                    <span class="fa fa-chevron-left"></span>
-                </button>
-                <button type="button" class="btn btn-light">
-                    <span class="fa fa-chevron-right"></span>
-                </button>
-            </div>
-        </div>
 
-        <ul class="messages">
-            
-            @foreach (var item in Model)
-            {
-                <li class="message unread">
-             
+            <ul class="messages">
+
+                @foreach (var item in Model)
+                {
+                    <form method="post" asp-controller="AdminMessage" asp-action="FalseMessage">
+                        <input type="hidden" name="Id" value="@item.Id" />
+                        <input type="hidden" name="Status" value="0"/>
+                        <button class="btn btn-warning" type="submit">
+                           <i class="fa fa-trash" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                    <li class="message unread">
+
                         <div class="actions">
-                            <span class="action"><i class="fa fa-square-o"></i></span>
-                            <span class="action"><i class="fa fa-star-o"></i></span>
+                            <span class="action">
+                                <i class="fa fa-square-o"></i>
+                            </span>
+                            <span class="action">
+                                <i class="fa fa-star-o"></i>
+                            </span>
                         </div>
                         <a href="/AdminMessage/Detail/@item.Id">
-                        <div class="header">
-                            <span class="from">Admin</span>
-                            <span class="date">
-                                <span class="fa fa-paper-clip"></span>@item.Date.ToShortDateString()</span>
-                        </div>
-                        <div class="title">
-                           @item.Title
-                        </div>
+                            <div class="header">
+                                <span class="from">Admin</span>
+                                <span class="date">
+                                    <span class="fa fa-paper-clip"></span>@item.Date.ToShortDateString()
+                                </span>
+                            </div>
+                            <div class="title">
+                                @item.Title
+                            </div>
                             <div class="description">
                                 @if (item.Description.Length <= 30)
                                 {
-                                   @item.Description
+                                    @item.Description
                                 }
                                 else
                                 {
-                                    @item.Description.Substring(0, 30)<span>... </span> <b>Devamını Oku...</b>
+                                    @item.Description.Substring(0, 30)<span>... </span>
+                                    <b>Devamını Oku...</b>
                                 }
                             </div>
-                            </a>
-                </li>
-            }
+                        </a>
+                    </li>
+                }
 
-        </ul>
-    </main>
-</div>
+            </ul>
+        </main>
+    </div>
 </div>

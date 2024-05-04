@@ -1,0 +1,55 @@
+@model List<eTicaretEL.Entities.Product>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_LayoutAdmin";
+}
+
+<br/>
+<h2>Onay Bekleyen Ürünler</h2>
+<br/>
+  <div class="alert alert-success" role="alert">
+        <span>Onay Bekleyen<b> @ViewBag.v1 </b>Ürün Bulundu</span>
+    </div>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Resim</th>
+        <th scope="col">Ürün</th>
+        <th scope="col">Fiyat</th>
+        <th scope="col">Düzenle</th>
+        <th scope="col">Sil</th>
+       
+    </tr>
+    </thead>
+    <tbody>
+    
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th scope="row">@item.Id</th>
+            <th scope="row"><img src="~/electro-master/img/@item.Img" width="50px"/></th>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td><a href="/AdminProduct/UserProductEdit/@item.Id" class="btn btn-warning">Düzenle</a></td>
+            <td><a href="/AdminProduct/UserProductEdit/@item.Id" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+    </tbody>
+</table>
+@{
+    int pageSize = 10; // Sayfa başına ürün sayısı
+    int totalProducts = ViewBag.v1; // Toplam ürün sayısı
+
+    // Son sayfa numarasını hesapla
+    int lastPage = (int)Math.Ceiling((double)totalProducts / pageSize);
+    int currentPage = ViewBag.CurrentPage ?? 1;
+
+    // Önceki sayfa ve sonraki sayfa numaralarını güvenli bir şekilde hesapla
+    var previousPage = Math.Max(currentPage - 1, 1);
+    var nextPage = Math.Min(currentPage + 1, lastPage);
+}
+
+<a asp-action="IsApprovedProduct" asp-route-page="@(previousPage)" class="btn btn-outline-primary @(currentPage == 1 ? "disabled" : "")">Önceki Sayfa</a>
+<a asp-action="IsApprovedProduct" asp-route-page="@(nextPage)" class="btn btn-outline-primary @(currentPage == lastPage ? "disabled" : "")">Sonraki Sayfa</a>

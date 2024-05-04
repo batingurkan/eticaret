@@ -32,7 +32,7 @@ public class HomeController : Controller
     }
     public async Task<IActionResult> Index()
     { 
-        var list = await _dataContext.Product.ToListAsync();
+        var list = await _dataContext.Product.Where(x=>x.IsApproved==true).ToListAsync();
         PopulateDropdowns();
         return View(list);
     }
@@ -41,7 +41,7 @@ public class HomeController : Controller
         int pageSize = 9; // Sayfa başına ürün sayısı
 
         var products = await _dataContext.Product
-            .Include(p => p.Category)
+            .Include(p => p.Category).Where(x=>x.IsApproved==true)
             .ToListAsync();
 
         var paginatedProducts = products
@@ -50,7 +50,7 @@ public class HomeController : Controller
             .Take(pageSize)
             .ToList();
 
-        ViewBag.CurrentPage = page; // Şu anki sayfa numarasını ViewBag'e atayın
+        ViewBag.CurrentPage = page;
         ViewBag.v1 = products.Count();
 
         var productDtos = _mapper.Map<List<ProductDto>>(paginatedProducts);
@@ -59,18 +59,37 @@ public class HomeController : Controller
         return View(productDtos);
     }
 
-
-    public  async Task<IActionResult> Product(int id)
+    public async Task<IActionResult> Product(int id)
     {
-        var product =await _dataContext.Product
+        var product = await _dataContext.Product
             .Include(p => p.User)
             .FirstOrDefaultAsync(x => x.Id == id);
 
         var productDto = _mapper.Map<ProductDto>(product);
+    
+        var userId = HttpContext.Session.GetInt32("userId");
+        
+        var commentsForProduct = await _dataContext.Comment
+            .Where(c => c.ProductId == id)
+            .ToListAsync();
+
+        if (commentsForProduct.Any())
+        {
+            var averageRating = commentsForProduct.Average(c => c.Raiting);
+            ViewBag.AverageRating = averageRating;
+        }
+        else
+        {
+            ViewBag.AverageRating = null;
+        }
+
+        ViewBag.UserId = userId;
+        ViewBag.CommentCount = _dataContext.Comment.Where(x => x.ProductId == id).Count();
+
         PopulateDropdowns();
         return View(productDto);
     }
-    
+
     public async Task<IActionResult> UserProfile(int id)
     {
         var user = await _dataContext.User
@@ -87,10 +106,11 @@ public class HomeController : Controller
     public async Task<IActionResult> Almostdone()
     {
         var products = await _dataContext.Product
-            .Include(p => p.Category)
+            .Include(p => p.Category).Where(x=>x.IsApproved==true)
             .ToListAsync();
 
         var productDtos = _mapper.Map<List<ProductDto>>(products);
+        
         ViewBag.v1 = products.Count();
         PopulateDropdowns();
         return View("HomePage", productDtos);
@@ -98,7 +118,7 @@ public class HomeController : Controller
     public async Task<IActionResult> HomeCategory(int id)
     {
         var products = await _dataContext.Product
-            .Include(p => p.Category).Where(x=>x.CategoryId==id)
+            .Include(p => p.Category).Where(x=>x.CategoryId==id && x.IsApproved==true)
             .ToListAsync();
 
         var productDtos = _mapper.Map<List<ProductDto>>(products);
@@ -112,7 +132,7 @@ public class HomeController : Controller
     {
         var products = await _dataContext.Product
             .Include(p => p.Category)
-            .OrderBy(p => p.Price)
+            .OrderBy(p => p.Price).Where(x=>x.IsApproved==true)
             .ToListAsync();
 
         var productDtos = _mapper.Map<List<ProductDto>>(products);

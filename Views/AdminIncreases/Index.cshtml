@@ -1,0 +1,40 @@
+@model List<eTicaretEL.Entities.Increases>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_LayoutAdmin";
+}
+
+
+<br/>
+<h2>Kargo Ve Komisyon Ücreti</h2>
+<br/>
+
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Kargo Boyutu</th>
+        <th scope="col">Kargo Ücreti</th>
+        <th scope="col">Komisyon Ücreti</th>
+        <th scope="col">Düzenle</th>
+        <th scope="col">Sil</th>
+       
+    </tr>
+    </thead>
+    <tbody>
+    
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th scope="row">@item.Id</th>
+            <td  class="f-w-600 ">@item.Size</td>
+            <td>@item.ShippingMoney</td>
+            <td>@item.Comission</td>
+            <td><a href="/AdminIncreases/IncreasesEdit/@item.Id" class="btn btn-warning">Düzenle</a></td>
+            <td><a href="/AdminIncreases/IncreasesEdit/@item.Id" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+    </tbody>
+</table>
+<button type="submit" class="btn btn-success">Ekle</button>

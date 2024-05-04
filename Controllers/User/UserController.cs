@@ -126,7 +126,19 @@ public class UserController : Controller
     }
     public async Task<IActionResult> OrderDetail(int id)
     {
-       
+        var userId = HttpContext.Session.GetInt32("userId");
+        var user = await _dataContext.OrderDetail
+            .Include(p => p.Products)
+            .Include(p => p.Orders)
+            .FirstOrDefaultAsync(x => x.Id == id && x.Orders.UserId == userId);
+
+        var orderDto = _mapper.Map<OrderDetailDto>(user);
+        PopulateDropdowns();
+        return View(orderDto);
+    }
+    public async Task<IActionResult> ApprovedProducts(int id)
+    {
+
         var userId = HttpContext.Session.GetInt32("userId");
         var user = await _dataContext.User
             .Include(p => p.Products)

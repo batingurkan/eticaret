@@ -44,3 +44,19 @@
     }
     </tbody>
 </table>
+
+@{
+    int pageSize = 10; // Sayfa başına ürün sayısı
+    int totalProducts = ViewBag.v1; // Toplam ürün sayısı
+
+    // Son sayfa numarasını hesapla
+    int lastPage = (int)Math.Ceiling((double)totalProducts / pageSize);
+    int currentPage = ViewBag.CurrentPage ?? 1;
+
+    // Önceki sayfa ve sonraki sayfa numaralarını güvenli bir şekilde hesapla
+    var previousPage = Math.Max(currentPage - 1, 1);
+    var nextPage = Math.Min(currentPage + 1, lastPage);
+}
+
+<a asp-action="Index" asp-route-page="@(previousPage)" class="btn btn-outline-primary @(currentPage == 1 ? "disabled" : "")">Önceki Sayfa</a>
+<a asp-action="Index" asp-route-page="@(nextPage)" class="btn btn-outline-primary @(currentPage == lastPage ? "disabled" : "")">Sonraki Sayfa</a>

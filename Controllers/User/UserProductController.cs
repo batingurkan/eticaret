@@ -1,9 +1,11 @@
 using AutoMapper;
 using eTicaretDAL;
 using eTicaretEL.AbstractValidator;
+using eTicaretEL.Dtos;
 using eTicaretEL.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace eTicaret.Controllers.User;
 
@@ -34,9 +36,16 @@ public class UserProductController : Controller
                 Value = x.Id.ToString()
             }).ToList();
 
+        List<SelectListItem> valuesize = (from x in _dataContext.Increases.ToList()
+            select new SelectListItem
+            {
+                Text = x.Size,
+                Value = x.Id.ToString()
+            }).ToList();
             
         ViewBag.vlb = valuebrand;
         ViewBag.vlc = valuecategory;
+        ViewBag.vls = valuesize;
     }
     
     [HttpGet]
@@ -71,7 +80,10 @@ public IActionResult ProductAdd(ProductAdd p)
         product.BrandId = p.BrandId;
         product.Model = p.Model;
         product.CategoryId = p.CategoryId;
+        product.IncreasesId = p.IncreasesId;
         product.UserId = userId.Value;
+        product.IsApproved = false;
+
         
         var validator = new ProdcutValidator();
         var result = validator.Validate(product);
@@ -113,10 +125,13 @@ public IActionResult ProductEdit(Product p)
     product.BrandId = p.BrandId;
     product.Model = p.Model;
     product.CategoryId = p.CategoryId;
+    product.IncreasesId = p.IncreasesId;
     product.UserId = userId.Value;
+    product.IsApproved = false;
     _dataContext.Product.Update(product);
     _dataContext.SaveChanges();
 
+    
     return RedirectToAction("Index", "Home");
 }
 
@@ -132,6 +147,30 @@ public IActionResult ProductDelete(int id)
     _dataContext.SaveChanges();
     
     return RedirectToAction("Index","Home");
+}
+
+public async Task<IActionResult> ProductsReceived(int id)
+{
+    var userId = HttpContext.Session.GetInt32("userId");
+    var user = await _dataContext.User
+        .Include(p => p.Products)
+        .FirstOrDefaultAsync(x => x.Id == userId);
+
+    var userDto = _mapper.Map<UserDto>(user);
+    PopulateDropdowns();
+    return View(userDto);
+}
+
+public async Task<IActionResult> ProductsSold(int id)
+{
+    var userId = HttpContext.Session.GetInt32("userId");
+    var user = await _dataContext.User
+        .Include(p => p.Products)
+        .FirstOrDefaultAsync(x => x.Id == userId);
+
+    var userDto = _mapper.Map<UserDto>(user);
+    PopulateDropdowns();
+    return View(userDto);
 }
 }
 

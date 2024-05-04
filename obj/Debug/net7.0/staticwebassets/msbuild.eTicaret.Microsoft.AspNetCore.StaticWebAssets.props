@@ -6720,6 +6720,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\electro-master\img\ab47748b-cccd-410e-8754-263122d55ed7.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\electro-master\img\ba610253-706c-4d09-8f8c-9fe8e7d56dd9.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>eTicaret</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eTicaret</BasePath>
+      <RelativePath>electro-master/img/ba610253-706c-4d09-8f8c-9fe8e7d56dd9.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\electro-master\img\ba610253-706c-4d09-8f8c-9fe8e7d56dd9.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\electro-master\img\c8d249d2-422d-45e8-9235-6191c18ee656.jpeg))">
       <SourceType>Package</SourceType>
       <SourceId>eTicaret</SourceId>
@@ -6735,6 +6751,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\electro-master\img\c8d249d2-422d-45e8-9235-6191c18ee656.jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\electro-master\img\fa41cb76-3e16-4637-b197-6c3eadfce5af.jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>eTicaret</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/eTicaret</BasePath>
+      <RelativePath>electro-master/img/fa41cb76-3e16-4637-b197-6c3eadfce5af.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\electro-master\img\fa41cb76-3e16-4637-b197-6c3eadfce5af.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\electro-master\img\fd8c7a9c-717f-412f-8571-ffc6aebce96d.JPG))">
       <SourceType>Package</SourceType>

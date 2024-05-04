@@ -20,10 +20,16 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="description">Yorumunuz</label>
-                <textarea class="form-control" id="description" name="Description" rows="3" placeholder="Yorumunuz"></textarea>
+                <label for="Description">Yorumunuz</label>
+                 <input type="text" asp-for="Description" class="form-control" placeholder="Yorumunuz">
             </div>
             <button type="submit" class="btn btn-primary">Yorum Yap</button>
         </form>
     </div>
 </div>
+@if (ViewBag.CommentSuccess != null)
+{
+    <div class="alert alert-success" role="alert">
+        @ViewBag.CommentSuccess
+    </div>
+}

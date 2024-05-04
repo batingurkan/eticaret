@@ -37,23 +37,52 @@ public class AdminProductController : Controller
                 Text = x.Name,
                 Value = x.Id.ToString()
             }).ToList();
+        
+        List<SelectListItem> valuesize = (from x in _dataContext.Increases.ToList()
+            select new SelectListItem
+            {
+                Text = x.Size,
+                Value = x.Id.ToString()
+            }).ToList();
 
 
         ViewBag.vlb = valuebrand;
         ViewBag.vlc = valuecategory;
+        ViewBag.vls = valuesize;
     }
 
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(int page = 1)
     {
         var list = await _dataContext.Product.ToListAsync();
-        return View(list);
+        
+        int pageSize = 9; 
+
+        var paginatedProducts = list
+            .OrderBy(s => s.Id)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToList();
+
+        ViewBag.CurrentPage = page; 
+        
+        ViewBag.v1 = list.Count();
+        return View(paginatedProducts);
     }
 
 
-    public async Task<IActionResult> UserProduct(int id)
+    public async Task<IActionResult> UserProduct(int id,int page = 1)
     {
         var list = await _dataContext.Product.Where(x => x.UserId == id).ToListAsync();
-        return View("Index", list);
+        int pageSize = 9; 
+
+        var paginatedProducts = list
+            .OrderBy(s => s.Id)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToList();
+        ViewBag.v1 = list.Count();
+        ViewBag.CurrentPage = page; 
+        return View("Index", paginatedProducts);
     }
 
     [HttpGet]
@@ -74,7 +103,9 @@ public class AdminProductController : Controller
         product.BrandId = p.BrandId;
         product.Model = p.Model;
         product.CategoryId = p.CategoryId;
+        product.IncreasesId = p.IncreasesId;
         product.UserId = product.UserId;
+        product.IsApproved = p.IsApproved;
         _dataContext.Product.Update(product);
         await _dataContext.SaveChangesAsync();
 
@@ -93,5 +124,23 @@ public class AdminProductController : Controller
         await _dataContext.SaveChangesAsync();
 
         return RedirectToAction("Index", "AdminProduct");
+    }
+    
+    public async Task<IActionResult> IsApprovedProduct(int page = 1)
+    {
+        var list = await _dataContext.Product.Where(x=>x.IsApproved==false).ToListAsync();
+        
+        int pageSize = 9; 
+
+        var paginatedProducts = list
+            .OrderBy(s => s.Id)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToList();
+
+        ViewBag.CurrentPage = page; 
+        
+        ViewBag.v1 = list.Count();
+        return View(paginatedProducts);
     }
 }

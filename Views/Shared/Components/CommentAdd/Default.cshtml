@@ -1,0 +1,36 @@
+@model eTicaretEL.Entities.Comment
+
+
+<div class="col-md-3">
+    <div id="review-form">
+        <form method="post" asp-controller="Comment" asp-action="CommentAdd" class="review-form">
+            <input type="hidden" name="UserId" value="@Model.UserId">
+            <input type="hidden" name="ProductId" value="@Model.ProductId">
+            <div class="form-group">
+                <label for="Description">Yorumunuz</label>
+                <textarea asp-for="Description" class="form-control" placeholder="Yorumunuz" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="rating">Oylama</label><br>
+                <input type="hidden" id="Deger" name="Raiting" value="5">
+            <div class="input-rating mt-1">
+                <span>Sizin Puanınız: </span>
+                <div class="stars">
+                    <input id="star5" name="rating" value="5" type="radio" onclick="updateRating(this.value)"><label for="star5"></label>
+                    <input id="star4" name="rating" value="4" type="radio" onclick="updateRating(this.value)"><label for="star4"></label>
+                    <input id="star3" name="rating" value="3" type="radio" onclick="updateRating(this.value)"><label for="star3"></label>
+                    <input id="star2" name="rating" value="2" type="radio" onclick="updateRating(this.value)"><label for="star2"></label>
+                    <input id="star1" name="rating" value="1" type="radio" onclick="updateRating(this.value)"><label for="star1"></label>
+                </div>
+            </div>
+                </div>
+            <button type="submit" class="primary-btn">Yorum Yap</button>
+        </form>
+    </div>
+</div>
+
+<script>
+ function updateRating(value) {
+     document.getElementById("Deger").value = value;
+ }
+</script>

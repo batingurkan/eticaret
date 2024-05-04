@@ -63,6 +63,7 @@ public class UserMail : Controller
 
         m.Date = DateTime.Now;
         m.SenderMail = usermail;
+        m.Status = true;
         m.ReciverMail = "Admin";
         
         _dataContext.Message.Add(m);

@@ -1,0 +1,53 @@
+@model List<eTicaretEL.Entities.Brand>
+
+<div class="alert alert-success" role="alert">
+    <span>Toplam<b> @ViewBag.v1 </b>Marka Bulundu</span>
+</div>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Marka</th>
+        <th scope="col">Düzenle</th>
+        <th scope="col">Sil</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th scope="row">@item.Id</th>
+            <th scope="row">@item.Name</th>
+            <td>
+                <a href="/AdminUser/UserEdit/@item.Id">
+                    <i class="fa fa-cog yellow_color fa-2x"></i>
+                </a>
+            </td>
+            <td>
+                <a href="/AdminUser/UserEdit/@item.Id">
+                    <i class="fa fa-trash red_color fa-2x" aria-hidden="true"></i>
+                </a>
+            </td>
+        </tr>
+    }
+   
+    </tbody>
+</table>
+<a href="/admin/" class="btn btn-success">
+       Marka Ekle
+    </a>
+@{
+    int pageSize = 5;
+    int totalProducts = ViewBag.v1 != null ? (int)ViewBag.v1 : 0;
+
+    int lastPage = (int)Math.Ceiling((double)totalProducts / pageSize);
+    int currentPage = ViewBag.CurrentPage ?? 1;
+
+    var previousPage = Math.Max(currentPage - 1, 1);
+    var nextPage = Math.Min(currentPage + 1, lastPage);
+}
+
+<a asp-action="Index" asp-controller="AdminCategory" asp-route-page="@(previousPage)" class="btn btn-outline-primary @(currentPage == 1 ? "disabled" : "")">Önceki Sayfa</a>
+<a asp-action="Index" asp-controller="AdminCategory" asp-route-page="@(nextPage)" class="btn btn-outline-primary @(currentPage == lastPage ? "disabled" : "")">Sonraki Sayfa</a>

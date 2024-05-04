@@ -1,68 +1,42 @@
 @model List<eTicaretEL.Dtos.OrderDetailDto>
 
-<div id="store" class="col-md-9">
-
-    <div class="alert alert-success " role="alert">
-        <span><b> @ViewBag.v1 </b>Sipariş Bulundu</span>
+<h2 class="text-success">Sipariş Detayı</h2>
+<br/>
+<div class="row">
+    <div class="col-md-8" style="display: inline-block;">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Resim</th>
+                    <th scope="col">Ürün</th>
+                    <th scope="col">Tutar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@item.Id</th>
+                        <td>
+                            <img src="~/electro-master/img/@item.Products.Img" width="50px" height="50px" />
+                        </td>
+                        <td>@item.Products.Name</td>
+                        <td>@item.Price</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
-
-    <div class="row">
-
-    
-     
-<table class="table">
-    <thead class="thead-dark">
-    <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Resim</th>
-        <th scope="col">Ürün</th>
-        <th scope="col">Tutar</th>
-        <th scope="col">Düzenle</th>
-        <th scope="col">Sil</th>
-
-    </tr>
-    </thead>
-    <tbody>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <th scope="row">@item.Id</th>
-            <td>
-                <img src="~/electro-master/img/@item.Products.Img" width="50px" height="50px"/>
-            </td>
-            <td>@item.Products.Name</td>
-            <td>@item.Price</td>
-            <td>
-                <a href="/AdminOrder/OrderEdit/@item.Id" class="btn btn-warning">Düzenle</a>
-            </td>
-            <td>
-                <a href="/AdminOrder/OrderEdit/@item.Id" class="btn btn-danger">Sil</a>
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
-
+    <div class="col-md-4" style="display: inline-block;">
+        @await Component.InvokeAsync("OrderSummary", new { id = Model.FirstOrDefault()?.Id })
     </div>
-    <div class="store-filter clearfix">
-        <ul class="store-pagination">
-            <li class="active">1</li>
-            <li>
-                <a href="#">2</a>
-            </li>
-            <li>
-                <a href="#">3</a>
-            </li>
-            <li>
-                <a href="#">4</a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-
 </div>
+
+
+
+
+  
+
+
+

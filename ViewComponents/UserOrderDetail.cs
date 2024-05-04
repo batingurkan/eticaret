@@ -17,17 +17,14 @@ public class UserOrderDetail:ViewComponent
         _mapper = mapper;
     }
 
-    public async Task<IViewComponentResult> InvokeAsync(int id)
+    public async Task<IViewComponentResult> InvokeAsync(int orderId)
     {
-        var userId = HttpContext.Session.GetInt32("userId");
-    
         var orderDetails = await _dataContext.OrderDetail
-            .Where(od => od.OrderId == userId )
+            .Where(od => od.OrderId == orderId)
             .Include(od => od.Products)
             .ToListAsync();
 
-        var orderDetailDto = _mapper.Map<List<OrderDetailDto>>(orderDetails);
-        return View(orderDetailDto); 
+        var orderDto = _mapper.Map<List<OrderDetailDto>>(orderDetails);
+        return View(orderDto);
     }
-    
 }

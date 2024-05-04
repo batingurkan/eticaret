@@ -1,0 +1,42 @@
+@model eTicaretEL.Entities.OrderDetail?
+
+<style>
+    .status-text {
+        color: green; 
+    }
+    
+    .status-text[data-status="Beklemede"] {
+        color: orange;
+    }
+    
+    .status-text[data-status="Onaylandı"] {
+        color: blue;
+    }
+    
+    .status-text[data-status="KargoyaVerildi"] {
+        color: red;
+    }
+    
+    .status-text[data-status="TeslimEdildi"] {
+        color: green;
+    }
+
+</style>
+<div>
+    <h3 class="text-danger">Sipariş Özeti</h3>
+    <br/>
+    <p class="d-block"><b>Adres</b> : Adana/Seyhan cadde/34 daire 2</p>
+    <p class="d-block"><b>Sipariş Tarihi</b> : @Html.DisplayFor(x=>x.Orders.OrderDate)</p>  
+    <p class="d-block"><b>Kargo Firması</b> :  @Html.DisplayFor(x=>x.Orders.CargoId)</p>  
+    <p class="d-block"><b>Kargo No</b> : @Html.DisplayFor(x=>x.Orders.CargoNo)</p>  
+    <br/>
+    <p class="d-block"><b>Komisyon Ücreti</b>  : 30 tl</p>  
+    <p class="d-block"><b>Kargo Ücreti</b> : 50 tl</p>  
+    <hr/>
+    <h5 class="text-dark"><span>Toplam</span> : @Html.DisplayFor(x=>x.Orders.TotalAmount) TL</h5>
+<span class="d-block">
+    <b class="text-dark">Durum</b> :
+    <span class="status-text" data-status="@Html.DisplayFor(x => x.Orders.OrderStatus.Status)">@Html.DisplayFor(x => x.Orders.OrderStatus.Status)</span>
+</span>
+
+</div>

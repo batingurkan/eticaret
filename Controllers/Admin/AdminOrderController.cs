@@ -22,12 +22,22 @@ public class AdminOrderController : Controller
     }
 
 
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(int page = 1)
     {
         var list = await _dataContext.Order.Include(p => p.User).Include(p => p.OrderDetail).Include(p => p.OrderStatus)
             .Include(p => p.Cargo).ToListAsync();
-        var orderDto = _mapper.Map<List<OrderDto>>(list);
+        int pageSize = 9; // Sayfa başına ürün sayısı
+
+        var paginatedProducts = list
+            .OrderBy(s => s.Id)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToList();
+
+        ViewBag.CurrentPage = page; // Şu anki sayfa numarasını ViewBag'e atayın
+        
         ViewBag.v1 = list.Count();
+        var orderDto = _mapper.Map<List<OrderDto>>(paginatedProducts);
         return View(orderDto);
     }
     public async Task<IActionResult>  UserOrder(int id)

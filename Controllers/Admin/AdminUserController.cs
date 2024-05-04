@@ -1,7 +1,6 @@
 using AutoMapper;
+using eTicaretBL.Abstract;
 using eTicaretDAL;
-using eTicaretEL.Entities;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,17 +11,20 @@ public class AdminUserController : Controller
 {
     private readonly DataContext _dataContext;
     private readonly IMapper _mapper;
+    private readonly IUserServices _userService;
 
-    public AdminUserController(DataContext dataContext, IMapper mapper)
+    public AdminUserController(DataContext dataContext, IMapper mapper, IUserServices userService)
     {
         _dataContext = dataContext;
         _mapper = mapper;
+        _userService = userService;
     }
 
    
     public async Task<IActionResult>  Index()
     {
-        var list =await _dataContext.User.ToListAsync();
+        var list = _userService.GetList();
+        ViewBag.v1 = list.Count();
         return View(list);
     }
  
@@ -38,10 +40,8 @@ public class AdminUserController : Controller
         var user = _dataContext.User.Where(x => x.Id == p.Id).FirstOrDefault();
         user.Name = p.Name;
         user.Email = p.Email;
-        user.Adress = p.Adress;
         user.Password = p.Password;
         user.UserRole = p.UserRole;
-        user.Tel = p.Tel;
         user.RecordDate = user.RecordDate;
         user.Id = user.Id;
         _dataContext.User.Update(user);

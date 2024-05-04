@@ -1,0 +1,52 @@
+@model List<eTicaretEL.Dtos.ProductDto>
+
+<div id="store" class="col-md-9">
+    <div class="alert alert-success" role="alert">
+        <span>Onay Bekleyen<b> @ViewBag.v1 </b>Ürün Bulundu</span>
+    </div>
+    
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 col-xs-6">
+                <div class="product">
+                    <div class="product-img">
+                        <img src="~/electro-master/img/@item.Img" width="600" height="300" alt="">
+                    </div>
+                    <div class="product-body">
+                        <p class="product-category">@item.CategoryName</p>
+                        <h3 class="product-name">
+                            <a href="#">@item.Name</a>
+                        </h3>
+                        <h4 class="product-price">$@item.Price <del class="product-old-price">$@item.Price</del></h4>
+
+                    </div>
+                    <div class="add-to-cart">
+                        <a class="add-to-cart-btn btn" href="/UserProduct/ProductEdit/@item.Id">Ürünü Güncelle</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="store-filter clearfix">
+        <ul class="store-pagination">
+            <li class="active">1</li>
+            <li>
+                <a href="#">2</a>
+            </li>
+            <li>
+                <a href="#">3</a>
+            </li>
+            <li>
+                <a href="#">4</a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>

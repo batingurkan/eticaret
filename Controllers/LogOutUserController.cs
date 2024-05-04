@@ -20,7 +20,7 @@ public class LogOutUserController : Controller
 
     public async Task<IActionResult> Index()
     {
-        var list =await _dataContext.Product.ToListAsync();
+        var list =await _dataContext.Product.Where(x=>x.IsApproved==true).ToListAsync();
         return View(list);
     }
     public async Task<IActionResult> HomePage(int page = 1)
@@ -28,7 +28,7 @@ public class LogOutUserController : Controller
         int pageSize = 9; // Sayfa başına ürün sayısı
 
         var products = await _dataContext.Product
-            .Include(p => p.Category)
+            .Include(p => p.Category).Where(x=>x.IsApproved==true)
             .ToListAsync();
 
         var paginatedProducts = products
@@ -47,7 +47,7 @@ public class LogOutUserController : Controller
     public async Task<IActionResult> HomeLogOutCategory(int id)
     {
         var products = await _dataContext.Product
-            .Include(p => p.Category).Where(x=>x.CategoryId==id)
+            .Include(p => p.Category).Where(x=>x.CategoryId==id || x.IsApproved==true)
             .ToListAsync();
 
         var productDtos = _mapper.Map<List<ProductDto>>(products);
@@ -59,7 +59,7 @@ public class LogOutUserController : Controller
     public  async Task<IActionResult> Product(int id)
     {
         var product =await _dataContext.Product
-            .Include(p => p.User)
+            .Include(p => p.User).Where(x=>x.IsApproved==true)
             .FirstOrDefaultAsync(x => x.Id == id);
 
         var productDto = _mapper.Map<ProductDto>(product);

@@ -148,35 +148,40 @@
                     <div class="col-md-12 col-lg-8">
                         <div class="items">
 
+
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-md-6">
-                                     <form id="paymentForm" action="/Order/CreateOrder" method="post">
-                                         <br/>
-                                   <input type="hidden" id="cargoNo" name="cargoNo" value="Henüz Belirtilmemiş">
-                                   <input type="hidden" id="cargoId" name="cargoId" value="1">
-                                   <input type="hidden" id="totalAmount" name="totalAmount" value="@ViewBag.Total">
-                                         <div class="mb-3">
-                                             <label for="cardNumber" class="form-label">Kart Numarası</label>
-                                             <input type="text" class="form-control" id="cardNumber" name="" placeholder="xxxx xxxx xxxx xxxx" required>
-                                         </div>
-                                         <div class="mb-3">
-                                             <label for="cardName" class="form-label">Kart Üzerindeki İsim</label>
-                                             <input type="text" class="form-control" id="cardName" name="" placeholder="Ad Soyad" required>
-                                         </div>
-                                         <div class="row">
-                                             <div class="col-md-6 mb-3">
-                                                 <label for="expiryDate" class="form-label">Son Kullanma Tarihi</label>
-                                                 <input type="text" class="form-control" id="expiryDate" name="" placeholder="MM/YY" required>
-                                             </div>
-                                             <div class="col-md-6 mb-3">
-                                                 <label for="cvv" class="form-label">CVV</label>
-                                                 <input type="text" class="form-control" id="cvv" name="" placeholder="XXX" required>
-                                             </div>
-                                         </div>
-                                         <br/>
-                                         <button type="submit" class="btn btn-primary">Ödemeyi Tamamla</button>
-                                     </form>
+                                        <form id="paymentForm" action="/Order/CreateOrder" method="post">
+                                            <br/>
+                                            <input type="hidden" id="cargoNo" name="cargoNo" value="Henüz Belirtilmemiş">
+                                            <input type="hidden" id="cargoId" name="cargoId" value="1">
+                                            <input type="hidden" id="totalAmount" name="totalAmount" value="@ViewBag.Total">
+                                            <div class="mb-3">
+                                                <label for="cardNumber" class="form-label">Kart Numarası</label>
+                                                <input type="text" class="form-control" id="cardNumber" name="" placeholder="xxxx xxxx xxxx xxxx" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="cardName" class="form-label">Kart Üzerindeki İsim</label>
+                                                <input type="text" class="form-control" id="cardName" name="" placeholder="Ad Soyad" required>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="expiryDate" class="form-label">Son Kullanma Tarihi</label>
+                                                    <input type="text" class="form-control" id="expiryDate" name="" placeholder="MM/YY" required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="cvv" class="form-label">CVV</label>
+                                                    <input type="text" class="form-control" id="cvv" name="" placeholder="XXX" required>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <div class="row">
+                                              
+                                            </div>
+                                            <br/>
+                                            <button type="submit" class="btn btn-primary">Ödemeyi Tamamla</button>
+                                        </form>
 
                                     </div>
                                 </div>
@@ -206,7 +211,6 @@
         </div>
     </section>
 </main>
-
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

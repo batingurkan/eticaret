@@ -40,7 +40,7 @@ namespace eTicaret.Controllers.Login
                 ClaimsPrincipal principal = new ClaimsPrincipal(useridentity);
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-                return RedirectToAction("Index", "Admin");
+                return RedirectToAction("Index", "AdminUser");
             }
 
             return View();

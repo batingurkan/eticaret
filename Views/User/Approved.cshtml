@@ -14,9 +14,8 @@
                     <div class="mt-3">
                         <h4>@Html.DisplayFor(x => x.Name)</h4>
                         <p class="text-secondary mb-1">@Html.DisplayFor(x => x.Email)</p>
-                        <p class="text-muted font-size-sm">@Html.DisplayFor(x => x.Adress)</p>
-                        <p class="text-muted font-size-sm">@Html.DisplayFor(x => x.Tel)</p>
-                          <a class="btn btn-success" href="/UserProduct/ProductAdd/">Ürün Ekle </a>
+                        <p></p>
+                                @await Component.InvokeAsync("UserDetail", new { UserId = Model.Id })
                     </div>
                 </div>
                 <hr class="my-4">
@@ -72,9 +71,11 @@
     </div>
 
     <div class="section col-lg-9 col-md-9">
-        
-  <div class="container"><a class="btn btn-default"  href="/User/PendingApproval/" style="margin-left: 10px;">Bekleyen Siparişler</a><a class="btn btn-default"  href="/User/Shipped/" style="margin-left: 10px;">Kargolanan Siparişler</a><a class="btn btn-success" href="/User/Approved/" style="margin-left: 10px;">Onaylanan Siparişler</a></div>
-        
+
+        <div class="container">
+            <a class="btn btn-default" href="/User/PendingApproval/" style="margin-left: 10px;">Bekleyen Siparişler</a><a class="btn btn-default" href="/User/Shipped/" style="margin-left: 10px;">Kargolanan Siparişler</a><a class="btn btn-success" href="/User/Approved/" style="margin-left: 10px;">Onaylanan Siparişler</a>
+        </div>
+
         <div class="container" style="margin-top: 20px">
             @await Component.InvokeAsync("UserOrdersApproved", new { userId = Model.Id })
         </div>

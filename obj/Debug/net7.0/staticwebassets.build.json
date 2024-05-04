@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6RcYOOgtISb5iQ4bwomTSpOsA+kH/VMhxtqHmRX5UK8=",
+  "Hash": "LpH+9/ywxyk7uGWTV5T89VGMXfZPZe/LB66QJxkv9OM=",
   "Source": "eTicaret",
   "BasePath": "_content/eTicaret",
   "Mode": "Default",
@@ -7191,6 +7191,23 @@
       "OriginalItemSpec": "wwwroot/electro-master/img/ab47748b-cccd-410e-8754-263122d55ed7.jpeg"
     },
     {
+      "Identity": "/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/wwwroot/electro-master/img/ba610253-706c-4d09-8f8c-9fe8e7d56dd9.png",
+      "SourceId": "eTicaret",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/wwwroot/",
+      "BasePath": "_content/eTicaret",
+      "RelativePath": "electro-master/img/ba610253-706c-4d09-8f8c-9fe8e7d56dd9.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/electro-master/img/ba610253-706c-4d09-8f8c-9fe8e7d56dd9.png"
+    },
+    {
       "Identity": "/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/wwwroot/electro-master/img/c8d249d2-422d-45e8-9235-6191c18ee656.jpeg",
       "SourceId": "eTicaret",
       "SourceType": "Discovered",
@@ -7206,6 +7223,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/electro-master/img/c8d249d2-422d-45e8-9235-6191c18ee656.jpeg"
+    },
+    {
+      "Identity": "/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/wwwroot/electro-master/img/fa41cb76-3e16-4637-b197-6c3eadfce5af.jpeg",
+      "SourceId": "eTicaret",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/wwwroot/",
+      "BasePath": "_content/eTicaret",
+      "RelativePath": "electro-master/img/fa41cb76-3e16-4637-b197-6c3eadfce5af.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/electro-master/img/fa41cb76-3e16-4637-b197-6c3eadfce5af.jpeg"
     },
     {
       "Identity": "/Users/gurkan/Desktop/MyProjects/E-Ticaret/eTicaret/eTicaret/wwwroot/electro-master/img/fd8c7a9c-717f-412f-8571-ffc6aebce96d.JPG",

@@ -1,11 +1,10 @@
 @model List<eTicaretEL.Dtos.ProductDto>
 
 <div id="store" class="col-md-9">
-   
-    <div class="alert alert-success " role="alert">
-    <span><b> @ViewBag.v1 </b>Ürün Bulundu</span> 
+    
+    <div class="alert alert-success" role="alert">
+        <span><b> @ViewBag.v1 </b>Ürün Bulundu</span>
     </div>
-
     <div class="row">
 
         @foreach (var item in Model)
@@ -21,7 +20,7 @@
                             <a href="#">@item.Name</a>
                         </h3>
                         <h4 class="product-price">$@item.Price <del class="product-old-price">$@item.Price</del></h4>
-                  
+
                     </div>
                     <div class="add-to-cart">
                         <a class="add-to-cart-btn btn" href="/UserProduct/ProductEdit/@item.Id">Ürünü Güncelle</a>
@@ -48,6 +47,7 @@
                 </a>
             </li>
         </ul>
+          <a class="btn btn-success " href="/UserProduct/ProductAdd/">Ürün Ekle </a>
     </div>
 
 </div>

@@ -42,3 +42,5 @@
     }
     </tbody>
 </table>
+<hr/>
+@await Component.InvokeAsync("OrderSummary",  new { id = Model.FirstOrDefault()?.Id } )
